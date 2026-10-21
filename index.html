@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/50cd058113.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="row nav__row">
+      <div class="fake__logo">
+        <figure class="nav__logo--wrapper">
+          <img src="assets/OMDB.png" class="nav__logo"> 
+        </figure>
+        <h1 class="nav__title"> OMDB Movie Finder </h1>
+      </div>
+      
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a href="#" class="black link__hover--effect">Home</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" class="black link__hover--effect">Support</a>
+        </li>
+        <li class="nav__link nav__link--movie">
+          <a href="#" class="white">Find Your Movie</a>
+        </li>
+      </ul>
+    </div>
+
+    
+  </nav>
+  <div class="background__image">
+    <div class="search">
+      <h1 class="search__title">
+        MOVIE FINDER
+      </h1>
+      <h3 class="search__subtitle">Search by <span class="orange"> Name </span> </h3>
+      <div class="search__bar--wrapper">
+        
+        <div class="search__bar">
+          <input placeholder="Requiem for a Dream" type="text" class="search__bar--input" onchange="searchBar(event)"> 
+          <figure class="search__icon--wrapper">
+            <button class="search__button">
+              
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </figure>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="filter">
+      <h1 class="filter__words">Sort By: </h1>
+        <select onchange="filterSearch(event)" class="filterRemove"> 
+          <option value="" class="remove" disabled selected>...</option>
+          <option value="A_TO_Z">Alphabetical, A-Z</option>
+          <option value="Z_TO_A">Alphabetical, Z-A</option>
+          <option value="IMDB_RATING">Release Date, Newest First</option>
+        </select>
+    </div>
+
+    <div class="movie__repository">
+      <!-- <figure class="movie__repository--background">
+        
+        <img src="assets/abstract-glowing-film-reel-background.jpg" alt="" class="movie__repository--img">
+      </figure> -->
+      <div class="loader load">
+
+        <i class="fas fa-spinner movies__loading--spinner"></i>
+      </div>
+      
+      
+      
+      
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <figure class="footer__logo">
+          <img src="assets/OMDB.png" class="footer__logo--img" alt="">
+          <h1 class="footer__title"> OMDB Movie Finder </h1>
+        </figure>
+        <div class="footer__links">
+          <a href="#" class="footer__link link__hover--effect link__hover--effect-white">Support</a>
+          <a href="#" class="footer__link link__hover--effect link__hover--effect-white">Contact</a>
+          <a href="#" class="footer__link link__hover--effect link__hover--effect-white">Source</a>
+        </div>
+        <div class="footer__copyright">OMDB© 2026</div>
+      </div>
+    </div>
+  </footer>
+  </body>
+  </html>
